@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tally Count</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="/Scripts.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.14.0/cdn/themes/light.css" />
+  
+</head>
+<body>
+    <header class="header">
+    </header>
+        <label>
+        </label>
+        <label>
+        </label>
+    </aside>
+    <main class="counter">
+        <sl-input class="counter__value" data-key="number" readonly value="0">0</sl-input>
+
+        <div class="counter__actions" >
+            <sl-button size="large"  style="width: 40%;" data-key="subtract" class="counter__button counter__button_first">Subtract</sl-button>
+            <sl-button size="large"  style="width: 40%;" data-key="add" class="counter__button">Add</sl-button>
+        </div>
+        <div>
+            <sl-button size="large"  style="width: 80.2%;" data-key="reset" class="reset">Reset</sl-button>
+        </div>
+        <div id="snackbar"></div>
+    </main>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.14.0/cdn/shoelace-autoloader.js"></script>
+</body>
+</html>

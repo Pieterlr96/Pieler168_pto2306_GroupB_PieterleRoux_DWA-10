@@ -1,0 +1,110 @@
+:root {
+    --color-green:#31c48d;
+    --color-white:#ffffff;
+    --color-dark-grey:#33333d;
+    --color-medium-grey:#424250;
+    --color-light-grey:#d2d6dc;
+
+}
+
+sl-button.counter__button::part(base) {
+    /* Set design tokens for height and border width */
+    --sl-input-height-medium: 48px;
+    --sl-input-border-width: 4px;
+    
+    border-radius: 0;
+    background-color: #33333d;
+    border-top-color: #d2d6dc;
+    border-left-color: #d2d6dc;
+    border-bottom-color: #424250;
+    border-right-color: #424250;
+    color: white;
+    font-size: 1.125rem;
+    box-shadow: 0 2px 10px #0002;
+    transition: var(--sl-transition-medium) transform ease, var(--sl-transition-medium) border ease;
+  }
+
+  sl-button.counter__button::part(base):hover {
+    transform: scale(1.05) rotate(-1deg);
+  }
+
+  sl-button.counter__button::part(base):active {
+    border-top-color: #33333d;
+    border-right-color: #d2d6dc;
+    border-bottom-color: #d2d6dc;
+    border-left-color: #424250;
+    transform: scale(1.05) rotate(-1deg) translateY(2px);
+  }
+
+  sl-button.counter__button::part(base):focus-visible {
+    outline: dashed 2px #33333d;
+    outline-offset: 4px;
+  }
+  sl-button.reset::part(base) {
+    /* Set design tokens for height and border width */
+    --sl-input-height-medium: 48px;
+    --sl-input-border-width: 4px;
+
+    border-radius: 0;
+    background-color: #33333d;
+    border-top-color: #d2d6dc;
+    border-left-color: #d2d6dc;
+    border-bottom-color: #424250;
+    border-right-color: #424250;
+    color: white;
+    font-size: 1.125rem;
+    box-shadow: 0 2px 10px #0002;
+    transition: var(--sl-transition-medium) transform ease, var(--sl-transition-medium) border ease;
+  }
+
+  sl-button.reset::part(base):hover {
+    transform: scale(1.05) rotate(-1deg);
+  }
+
+  sl-button.reset::part(base):active {
+    border-top-color: #33333d;
+    border-right-color: #d2d6dc;
+    border-bottom-color: #d2d6dc;
+    border-left-color: #424250;
+    transform: scale(1.05) rotate(-1deg) translateY(2px);
+  }
+
+  sl-button.reset::part(base):focus-visible {
+    outline: dashed 2px deeppink;
+    outline-offset: 4px;
+  }
+  #snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+}
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
